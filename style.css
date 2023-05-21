@@ -1,0 +1,47 @@
+.vert-line {
+    border-left: 0.1vw solid #000000;
+    height: 6vh;
+}
+li{
+    display: inline-block;
+    vertical-align: middle;
+}
+nav{
+    text-align: center;
+}
+nav ul{
+    text-align: center;
+    display: inline-block;
+    height: auto;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 35px;
+    width: auto;
+    
+    padding: 0 1vw;
+    text-align: center;
+}
+.nav-item {
+    margin: 1vw;
+    /* height: 5px; */
+}
+#start-icon{
+    margin-left: 1vw;
+}
+#end-icon{
+    margin-right: 1vw;
+}
+.icons{
+    width: 6vh;
+    height: 6vh;
+    margin: 0.5vh 0.25vw;
+}
+.type-breakdown{
+    text-align: center;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 35px;
+}
+footer{
+    text-align: center;
+}
