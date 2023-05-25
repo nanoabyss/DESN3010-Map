@@ -7,7 +7,13 @@ li{
     vertical-align: middle;
 }
 nav{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
     text-align: center;
+    z-index: 1;
 }
 nav ul{
     text-align: center;
@@ -25,10 +31,10 @@ nav ul{
     margin: 1vw;
     /* height: 5px; */
 }
-#start-icon{
+#cafe{
     margin-left: 1vw;
 }
-#end-icon{
+#retail{
     margin-right: 1vw;
 }
 .icons{
@@ -41,7 +47,27 @@ nav ul{
     display: inline-block;
     border: 1px solid black;
     border-radius: 35px;
+    z-index: 999;
+}
+.type-button{
+    background-color: transparent;
+	border: 0;
+	padding: 0;
 }
 footer{
+    position: absolute;
+    /* margin-left: auto;
+    margin-right: auto; */
+    left: 0; right: 0; top: 0; bottom: 0;
+    margin: 90vh auto 0 auto;
     text-align: center;
+    z-index: 1;
+}
+body { margin: 0; padding: 0; }
+#map { 
+    position: absolute; 
+    top: 0; 
+    bottom: 0; 
+    width: 100%; 
+    z-index: 0;
 }
