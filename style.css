@@ -26,6 +26,7 @@ nav ul{
     
     padding: 0 1vw;
     text-align: center;
+    z-index: 2;
 }
 .nav-item {
     margin: 1vw;
@@ -70,4 +71,9 @@ body { margin: 0; padding: 0; }
     bottom: 0; 
     width: 100%; 
     z-index: 0;
+}
+
+/* Information Pages CSS */
+.main-container{
+    display: flex;
 }

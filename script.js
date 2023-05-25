@@ -11,8 +11,8 @@ const map = new mapboxgl.Map({
     container: 'map',
     // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
     style: 'mapbox://styles/kylerobertson-98/clhsf0kv900oy01pofrom3xhz',
-    center: [149.110159, -35.250093],
-    zoom: 11.15
+    center: [149.144,-35.307],
+    zoom: 10.5
 });
 
 // map.on('load', () => {
@@ -108,4 +108,70 @@ document.getElementById('retail-button').addEventListener('click', function(){
         map.setFilter('locations-canberra', null)
         retailtracker = 0;
     }
+});
+
+function buttonclicked(button){
+    switch(button){
+        case 'north':
+            console.log("North");
+            map.fitBounds([
+                [148.962649, -35.267175],
+                [149.296011, -35.111423]
+            ]);
+            map.setFilter('locations-canberra', ['in','area','North']);
+            break;
+        case 'inner-north':
+            console.log("Inner North");
+            map.fitBounds([
+                [149.076949, -35.303617],
+                [149.254140, -35.221187]
+            ]);
+            map.setFilter('locations-canberra', ['in','area','Inner North']);
+            break;
+        case 'inner-south':
+            console.log("Inner South");
+            map.fitBounds([
+                [149.053985, -35.346255],
+                [149.193944, -35.281044]
+            ]);
+            map.setFilter('locations-canberra', ['in','area','Inner South']);
+            break;
+        case 'south':
+            console.log("South");
+            map.fitBounds([
+                [148.984598, -35.459392],
+                [149.265964, -35.328773]
+            ]);
+            map.setFilter('locations-canberra', ['in','area','South']);
+            break;
+        case 'reset':
+            console.log("reset");
+            map.fitBounds([
+                [148.780120, -35.474503],
+                [149.561017, -35.115220]
+            ]);
+            map.setFilter('locations-canberra', null);
+            break;
+    }
+};
+
+
+
+
+
+
+document.getElementById('north-button').addEventListener('click', function(){
+    buttonclicked('north');
+});
+document.getElementById('inner-north-button').addEventListener('click', function(){
+    buttonclicked('inner-north');
+});
+document.getElementById('inner-south-button').addEventListener('click', function(){
+    buttonclicked('inner-south');
+});
+document.getElementById('south-button').addEventListener('click', function(){
+    buttonclicked('south');
+});
+document.getElementById('reset-button').addEventListener('click', function(){
+    buttonclicked('reset');
 });
