@@ -1,3 +1,21 @@
+@font-face {
+    font-family: mainfont;
+    src: url("Louis George Cafe.ttf");
+}
+@font-face {
+    font-family: boldmainfont;
+    src: url("Louis George Cafe Bold.ttf");
+}
+
+p, button{
+    /*Setting the font for all the p tags in the project*/
+    font-family: mainfont, sans-serif;
+}
+h1,h2,h3,h4{
+    font-family: boldmainfont, sans-serif;
+}
+
+
 .vert-line {
     border-left: 0.1vw solid #000000;
     height: 6vh;
@@ -43,6 +61,17 @@ nav ul{
     height: 6vh;
     margin: 0.5vh 0.25vw;
 }
+.icons:hover{
+    transform: scale(1.2);
+}
+#cafe-info{
+    opacity: 0;
+}
+#cafe:hover #cafe-info{
+    opacity: 1;
+}
+
+
 .type-breakdown{
     text-align: center;
     display: inline-block;
@@ -55,6 +84,13 @@ nav ul{
 	border: 0;
 	padding: 0;
 }
+
+.type-button2{
+    background-color: transparent;
+	border: 0;
+	padding: 0;
+}
+
 footer{
     position: absolute;
     /* margin-left: auto;
@@ -74,6 +110,133 @@ body { margin: 0; padding: 0; }
 }
 
 /* Information Pages CSS */
-.main-container{
-    display: flex;
+.locations-body{
+    background-color: #FFFFF5;
 }
+
+
+.overall-container{
+    display: flex;
+    flex-direction: column;
+    margin: 6vh auto;
+    width: 90vw;
+    height: auto;
+    background-color:#F5F5EB;
+    border-radius: 30px;
+    padding-bottom: 2vh;
+}
+
+.container-img{
+    /* border: #000000 1px solid; */
+    width: 60vw;
+    height: auto;
+}
+.image1{
+    margin: 0 auto 1vh;
+    width: 58vw;
+    height: 70vh;
+    border-radius: 35px;
+}
+.sub-images-container{
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    column-gap: 2vw;    
+}
+.sub-image{
+    width: 10vw;
+    height: auto;
+    border-radius: 20px;
+}
+.main-image{
+    width: 58vw;
+    height: 70vh;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.main-cont{
+    display: flex;
+    flex-direction: row;
+    padding-top: 1vw;
+}
+.main-text{
+    width: 30vw;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10vh;
+}
+.return{
+    margin: 5vh 0 0 5%;
+    margin-right: auto;
+}
+.return button{
+    background-color: #C3C3B9;
+	border: 2px solid #737369;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 15px;
+	/* padding: 0  */
+}
+.return a{
+    text-decoration: none;
+    color: black;
+}
+.icons-cont p{
+    margin: auto 0;
+}
+.icons-cont img{
+    width: 3vw;
+    height: auto;
+    
+}
+.icons-cont{
+    margin: 10vh auto 0;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    column-gap: 1vw;
+    justify-content: center;
+}
+.text-section{
+    width: 80%;
+ }
+
+.secondary-text{
+    margin: 2% 0 0 10%;
+    display: flex;
+    flex-direction: row;
+    column-gap: 15vw;
+    border-left: 2px solid #737369;
+    /* border-top: 1px solid black; */
+    padding: 1vh 0 0 1vh;
+}
+.secondary-text-main{
+    width: 35vw;
+    margin: 0;
+}
+.secondary-text-main p{
+    margin: 0;
+}
+.locations-socials{
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vh;
+    padding: 1vh 0 0 1vh;
+    border-left: 2px solid #737369;
+    border-top: 2px solid #737369;
+    height: 13vh;
+}
+.locations-socials img{
+    width: 30px;
+    height: auto;
+    margin: 0;
+}
+.locations-socials p{
+    margin: 0;
+}
+
+

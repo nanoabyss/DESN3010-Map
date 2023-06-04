@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>The Green Shed</title>
-    <link href="style.css" rel="stylesheet">
+    <link href="../style.css" rel="stylesheet">
+    <script src="../script.js"></script> 
 </head>
-<body>
+<body class = "locations-body">
     <!-- title and return to map -->
 <nav>
     <section></section>
@@ -13,10 +14,59 @@
 </nav>
 <!-- main Body -->
 <!-- This section will use flex -->
-<section class = 'main-container'>
-    <div class = ''>
-
+<section class = 'overall-container'>
+    <div class = 'main-cont'>
+        <div class="main-text">
+            <div class = "return">
+                <button><a href ="../index.html">Return to Map</a></button>
+            </div>
+            <div class = "icons-cont">
+                <img src="../SVG/Layer 6.svg">
+                <p>
+                    Retail Shops
+                </p>
+            </div>
+            <div class = "text-section">
+            <h1>The Green Shed</h1>
+            <p>
+                At The Green Shed they gratefully accept unwanted items that can be resold at their Shed, subject to quality and demand
+            </p>
+            </div>
+        </div>
+        <div class="container-img">
+            <div class = "image1">
+                <img src="../images/greenShed/1.jpg" class="main-image" id ="mainImage">
+            </div>
+            <div class = "sub-images-container">
+                <img src="../images/greenShed/1.jpg" class = "sub-image" onclick="change_image(this.src)">
+                <img src="../images/greenShed/2.jpg" class = "sub-image" onclick="change_image(this.src)">
+                <img src="../images/greenShed/3.jpg" class = "sub-image" onclick="change_image(this.src)">
+                <img src="../images/greenShed/4.jpg" class = "sub-image" onclick="change_image(this.src)"> 
+                <img src="../images/greenShed/5.png" class = "sub-image" onclick="change_image(this.src)">
+            </div>
+        </div>
     </div>
+    <div class="secondary-text">
+        <div class = "secondary-text-main">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris varius diam purus, sed imperdiet nisl porttitor in. Donec et laoreet nibh, et vulputate orci. Morbi aliquet dolor ac mattis commodo. Ut scelerisque faucibus felis vel hendrerit. Sed at arcu vel erat pulvinar placerat. In venenatis tellus ut risus euismod cursus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce gravida congue mi. Vivamus sollicitudin nunc id semper consequat. Vivamus justo elit, bibendum sit amet ipsum sed, suscipit pellentesque nibh. Mauris quam eros, volutpat non auctor sed, elementum vel mi. Nam a tortor eget orci pharetra laoreet ut a turpis. In a dapibus libero. Donec placerat sed ligula nec dapibus. Donec ullamcorper magna eu nunc blandit, eget lobortis felis euismod.
+            <br>
+            <br>
+            Fusce vitae dapibus nisi. Maecenas justo mauris, pharetra vel nunc a, placerat vehicula ex. Cras malesuada justo ut accumsan ullamcorper. Aenean fermentum aliquam neque ut accumsan. Pellentesque sit amet lorem vestibulum, iaculis nisl quis, pharetra elit. Nam semper turpis nibh, vitae rutrum justo faucibus nec. Aenean faucibus odio in arcu feugiat fringilla.
+            <br>
+            <br>
+            Suspendisse at feugiat sapien. Morbi vel mattis sapien. Duis eget accumsan sapien, quis maximus magna. Etiam lacus augue, lacinia vitae enim sit amet, vulputate lobortis orci. Donec pulvinar velit nulla, in interdum tortor consequat vitae. Curabitur auctor non odio at semper. Aliquam ornare sapien eu turpis posuere gravida. Integer tincidunt, nibh quis molestie interdum, mi ante luctus dolor, et euismod ligula metus a metus. Pellentesque lacinia ornare mauris. Sed nulla quam, pharetra sit amet felis a, fringilla ultrices massa. Etiam quis accumsan arcu, volutpat consequat nunc. Phasellus eget auctor est. Phasellus libero nulla, egestas quis eros ut, dapibus varius nulla. Praesent imperdiet nunc scelerisque volutpat rhoncus. Praesent pellentesque tellus ac condimentum aliquet. 
+        </p>
+    </div>
+        <div class="locations-socials">
+        <p>
+            Website <a href="https://thegreenshed.net.au/">https://thegreenshed.net.au/</a>
+        </p>
+        <a href="https://www.instagram.com/the_green_shed_cbr/"><img src="../Instagram.svg"></a>
+        <a href="https://www.facebook.com/thegreenshed.au/"><img src="../facebook.svg"></a>
+        </div>
+    </div>
+    <div class="similar-locations"></div>
 
 
 

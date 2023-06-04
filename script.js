@@ -38,7 +38,11 @@ map.on('click', (event) => {
     const popup = new mapboxgl.Popup({ offset: [0, -15] })
       .setLngLat(feature.geometry.coordinates)
       .setHTML(
-      `<h3>${feature.properties.title}</h3><p>${feature.properties.description}</p>`
+      `<a href = "location-page/${feature.properties.filename}.html">
+      <h3>${feature.properties.title}</h3></a>
+      <p>${feature.properties.description}</p>
+      <a href = "location-page/${feature.properties.filename}.html" style="text-align: center;">
+      Click Here</a>`
         )
         .addTo(map);
     
@@ -175,3 +179,9 @@ document.getElementById('south-button').addEventListener('click', function(){
 document.getElementById('reset-button').addEventListener('click', function(){
     buttonclicked('reset');
 });
+
+function change_image(clicked_id){
+    document.getElementById('mainImage').src = clicked_id;
+
+    
+};
