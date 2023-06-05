@@ -12,7 +12,7 @@ const map = new mapboxgl.Map({
     // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
     style: 'mapbox://styles/kylerobertson-98/clhsf0kv900oy01pofrom3xhz',
     center: [149.144,-35.307],
-    zoom: 10.5
+    zoom: 11
 });
 
 // map.on('load', () => {
@@ -55,6 +55,54 @@ var parktracker = 0;
 var attracttracker = 0;
 var retailtracker = 0;
 
+function setOpac(){
+    document.getElementById('cafe').style.opacity = 1;
+    document.getElementById('restaurants').style.opacity = 1;
+    document.getElementById('parks').style.opacity = 1;
+    document.getElementById('attractions').style.opacity = 1;
+    document.getElementById('retail').style.opacity = 1; 
+};
+
+function setOpacMain(icon){
+    switch(icon){
+        case 'cafe':
+            document.getElementById('cafe').style.opacity = 1;
+            document.getElementById('restaurants').style.opacity = 0.5;
+            document.getElementById('parks').style.opacity = 0.5;
+            document.getElementById('attractions').style.opacity = 0.5;
+            document.getElementById('retail').style.opacity = 0.5; 
+            break;
+        case 'restaurants':
+            document.getElementById('cafe').style.opacity = 0.5;
+            document.getElementById('restaurants').style.opacity = 1;
+            document.getElementById('parks').style.opacity = 0.5;
+            document.getElementById('attractions').style.opacity = 0.5;
+            document.getElementById('retail').style.opacity = 0.5; 
+            break;
+        case 'parks':
+            document.getElementById('cafe').style.opacity = 0.5;
+            document.getElementById('restaurants').style.opacity = 0.5;
+            document.getElementById('parks').style.opacity = 1;
+            document.getElementById('attractions').style.opacity = 0.5;
+            document.getElementById('retail').style.opacity = 0.5; 
+            break;
+        case 'attractions':
+            document.getElementById('cafe').style.opacity = 0.5;
+            document.getElementById('restaurants').style.opacity = 0.5;
+            document.getElementById('parks').style.opacity = 0.5;
+            document.getElementById('attractions').style.opacity = 1;
+            document.getElementById('retail').style.opacity = 0.5; 
+            break;
+        case 'retail':
+            document.getElementById('cafe').style.opacity = 0.5;
+            document.getElementById('restaurants').style.opacity = 0.5;
+            document.getElementById('parks').style.opacity = 0.5;
+            document.getElementById('attractions').style.opacity = 0.5;
+            document.getElementById('retail').style.opacity = 1; 
+            break;
+    }
+}
+
 
 
 document.getElementById('cafe-button').addEventListener('click', function(){
@@ -62,10 +110,11 @@ document.getElementById('cafe-button').addEventListener('click', function(){
     if (cafetracker == 0){
         map.setFilter('locations-canberra', ['in','type','cafe'])
         cafetracker = 1;
-        console.log(cafetracker)
+        setOpacMain('cafe');
     } else {
         map.setFilter('locations-canberra', null)
         cafetracker = 0;
+        setOpac(); 
     }
 });
 
@@ -75,9 +124,11 @@ document.getElementById('restaurants-button').addEventListener('click', function
         map.setFilter('locations-canberra', ['in','type','Bar & Restaurants'])
         bartracker = 1;
         console.log(bartracker)
+        setOpacMain('restaurants');
     } else {
         map.setFilter('locations-canberra', null)
         bartracker = 0;
+        setOpac();
     }
 });
 document.getElementById('parks-button').addEventListener('click', function(){
@@ -86,9 +137,11 @@ document.getElementById('parks-button').addEventListener('click', function(){
         map.setFilter('locations-canberra', ['in','type','National Park'])
         parktracker = 1;
         console.log(parktracker)
+        setOpacMain('parks');
     } else {
         map.setFilter('locations-canberra', null)
         parktracker = 0;
+        setOpac();
     }
 });
 document.getElementById('attractions-button').addEventListener('click', function(){
@@ -97,9 +150,11 @@ document.getElementById('attractions-button').addEventListener('click', function
         map.setFilter('locations-canberra', ['in','type','Attractions'])
         attracttracker = 1;
         console.log(attracttracker)
+        setOpacMain('attractions');
     } else {
         map.setFilter('locations-canberra', null)
         attracttracker = 0;
+        setOpac();
     }
 });
 document.getElementById('retail-button').addEventListener('click', function(){
@@ -108,9 +163,11 @@ document.getElementById('retail-button').addEventListener('click', function(){
         map.setFilter('locations-canberra', ['in','type','Retail'])
         retailtracker = 1;
         console.log(retailtracker)
+        setOpacMain('retail');
     } else {
         map.setFilter('locations-canberra', null)
         retailtracker = 0;
+        setOpac();
     }
 });
 
